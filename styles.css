@@ -19,6 +19,7 @@ body {
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* 5. Improve media defaults */
@@ -73,7 +74,7 @@ h6 {
 
 .hero {
   background-image: url("./images/desktop/image-hero.jpg");
-  padding: 4rem 7rem 7rem 7rem;
+  padding: 9rem 16.3rem 16.3rem 16.3rem;
 }
 
 .navbar {
@@ -86,16 +87,175 @@ h6 {
 .list {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 3.2rem;
   color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: "Alata";
+  padding-left: 0;
 }
 
-.logo {
+.list li {
+  cursor: pointer;
+  position: relative;
+}
+
+.list li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 29%;
+  transition: width 0.3s ease;
+}
+
+.list li:hover::after {
+  width: 2rem;
 }
 
 .title-box {
+  max-width: 65em;
+  border: 2px solid #fff;
+  padding: 4rem;
 }
 
 .title {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  color: #fff;
+  font-size: 7.2rem;
+  line-height: 7rem;
+  text-align: start;
+}
+
+.info-box {
+  display: flex;
+  align-items: flex-end;
+  padding: 16.3rem;
+}
+
+.info-box img {
+  max-width: 73.1rem;
+}
+
+.info-div {
+  max-width: 44.5em;
+  box-shadow: -100px -50px 0px 50px #fff;
+}
+
+.subtitle {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 4.5rem;
+  line-height: 48px;
+  margin-bottom: 2.5rem;
+}
+
+.description {
   font-family: "Alata";
+  font-size: 1.3rem;
+  line-height: 25px;
+  font-weight: 400;
+  color: hsl(0, 0%, 55%);
+}
+
+.gallery {
+  padding-inline: 16.3rem;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.btn {
+  padding: 1.3rem 4rem;
+  font-family: "Alata";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 14px;
+  letter-spacing: 5px;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.creations {
+  display: grid;
+  grid-template-rows: repeat(2, 450px);
+  grid-template-columns: repeat(4, 256px);
+  gap: 30px;
+  margin-bottom: 20rem;
+}
+
+.image-container {
+  position: relative;
+
+  display: inline-block;
+}
+
+.image-container img:hover {
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.text-overlay {
+  font-family: "Josefin sans";
+  font-size: 3.2rem;
+  line-height: 32px;
+  font-weight: 300;
+  position: absolute;
+  transform: translate(30%, -140%);
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.footer {
+  background-color: #000;
+  flex-direction: column;
+  display: flex;
+  color: #fff;
+  padding: 5rem 16.3rem;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  max-width: 14.4rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-footer p {
+  font-family: "Alata";
+  font-size: 1.5rem;
+  line-height: 25px;
+  font-weight: 300;
+  color: hsl(0, 0%, 41%);
 }
