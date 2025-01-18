@@ -199,11 +199,7 @@ h6 {
 
 .image-container {
   position: relative;
-
   display: inline-block;
-}
-
-.image-container img:hover {
 }
 
 .image-container img {
@@ -258,4 +254,104 @@ h6 {
   line-height: 25px;
   font-weight: 300;
   color: hsl(0, 0%, 41%);
+}
+
+.hamburguer {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .hero {
+    background-image: url("./images/mobile/image-hero.jpg");
+    padding: 2rem 2.4rem;
+  }
+
+  .title-box {
+    padding: 2.4rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 38px;
+  }
+
+  .creations {
+    grid-template-rows: repeat(8, 120px);
+    grid-template-columns: repeat(1, 327px);
+    gap: 3rem;
+  }
+
+  .list {
+    visibility: hidden;
+    flex-direction: column;
+  }
+
+  .footer ul {
+    visibility: visible;
+  }
+
+  .hamburguer {
+    display: block;
+    margin-left: 10rem;
+  }
+
+  .info-div {
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 3.2rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .info-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 4rem;
+  }
+
+  .info-box img {
+    width: 28.7em;
+    margin-bottom: 4rem;
+  }
+
+  .gallery {
+    padding: 0 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .btn {
+    position: absolute;
+    top: 87%;
+    left: 28%;
+    margin-top: 3rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding-inline: 5.1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .footer-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
