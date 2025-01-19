@@ -256,14 +256,22 @@ h6 {
   color: hsl(0, 0%, 41%);
 }
 
-.hamburguer {
+.menu {
   display: none;
 }
 
-@media (max-width: 375px) {
+.hamburguer-menu {
+  display: none;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
   .hero {
     background-image: url("./images/mobile/image-hero.jpg");
     padding: 2rem 2.4rem;
+  }
+
+  .navbar {
+    margin-bottom: 7rem;
   }
 
   .title-box {
@@ -282,17 +290,12 @@ h6 {
   }
 
   .list {
-    visibility: hidden;
+    display: none;
     flex-direction: column;
   }
 
   .footer ul {
-    visibility: visible;
-  }
-
-  .hamburguer {
     display: block;
-    margin-left: 10rem;
   }
 
   .info-div {
@@ -353,5 +356,46 @@ h6 {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+  }
+
+  .menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+  .hamburguer-menu {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 100;
+    padding: 4rem 3rem;
+  }
+
+  .menu-imgs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rem;
+  }
+
+  .list-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+    list-style: none;
+    font-family: "josefin sans";
+    font-size: 2.4rem;
+    line-height: 25px;
+    font-weight: 300;
+    gap: 2.4rem;
+    padding: 0;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    border: none;
   }
 }
